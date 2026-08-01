@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/deploy-quarterzip-sdk
+note: >-
+  Quarterzip ships a first-party client-side JavaScript SDK delivered via an async
+  <script> stub embedded before </body> (no npm/registry package is published). A
+  React wrapper hook example is provided in the docs. No server-side SDKs found on
+  npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, or crates.io.
+packages:
+- language: javascript
+  registry: script-embed
+  name: Quarterzip Web SDK
+  url: https://docs.quarterzip.ai/deploy-quarterzip-sdk
+  install: Paste the async loader <script> snippet before the closing </body> tag.
+  official: true
+  interface:
+  - window.Quarterzip.open()
+  - window.Quarterzip.close()

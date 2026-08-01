@@ -1,7 +1,28 @@
 aid: quarterzip
 name: Quarterzip
-description: Quarterzip is a company surfaced as a portfolio company of felicis and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Quarterzip builds AI screenshare agents that deliver real-time, in-product user
+  assistance. Its agent sees a user's screen, guides them by voice, and executes the
+  steps alongside them in real time, powering onboarding, activation, and customer
+  support at scale without additional headcount. Teams embed Quarterzip through a
+  hosted Link URL or a client-side JavaScript SDK that launches a draggable in-app
+  call (window.Quarterzip.open/close), and receive signed call.completed webhooks
+  (Standard Webhooks HMAC) carrying transcripts and call ratings for CRM and
+  analytics integration. Customers include Bloomreach, Apollo, Dovetail, Airspeed,
+  and Zuper. Quarterzip is ISO 27001 certified.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/6894695956f5ee5691443986/6a4b45ff2d315efec1742406_poster.jpg
 url: https://raw.githubusercontent.com/api-evangelist/quarterzip/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- AI Agents
+- Customer Support
+- Onboarding
+- User Activation
+- Screen Sharing
+- Voice
+- Webhooks
+- SDK
+- Developer Tools
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +53,46 @@ maintainers:
 common:
 - type: Website
   url: https://quarterzip.ai
+- type: DeveloperPortal
+  url: https://docs.quarterzip.ai/
+- type: Documentation
+  url: https://docs.quarterzip.ai/
+- type: APIReference
+  url: https://docs.quarterzip.ai/sdk-api
+- type: GettingStarted
+  url: https://docs.quarterzip.ai/getting-started
+- type: SignUp
+  url: https://app.quarterzip.ai/
+- type: ChangeLog
+  url: changelog/quarterzip-changelog.yml
+- type: LLMsTxt
+  url: llms/quarterzip-llms.txt
+- type: Webhooks
+  url: asyncapi/quarterzip-webhooks.yml
+- type: Authentication
+  url: authentication/quarterzip-authentication.yml
+- type: Conventions
+  url: conventions/quarterzip-conventions.yml
+- type: Packages
+  url: packages/quarterzip-packages.yml
+- type: SDKs
+  url: packages/quarterzip-packages.yml
+- type: Components
+  url: components/quarterzip-components.yml
+- type: Lifecycle
+  url: lifecycle/quarterzip-lifecycle.yml
+- type: StatusPage
+  url: https://status.quarterzip.ai/
+- type: Conformance
+  url: conformance/quarterzip-conformance.yml
+- type: Compliance
+  url: https://trust.quarterzip.ai/
+- type: TrustCenter
+  url: security/quarterzip-trust-center.yml
+- type: DomainSecurity
+  url: security/quarterzip-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1

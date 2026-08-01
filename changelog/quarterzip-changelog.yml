@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/changelog
+scheme: rolling-feature-log
+note: >-
+  Quarterzip publishes an undated rolling feature changelog. Entries below are the
+  recent window captured verbatim from the docs changelog; the docs page is the
+  source of truth for dates.
+entries:
+- title: Call Context
+  breaking: false
+  highlights: >-
+    Pass user information (plan, country, handover notes) directly to agents at call
+    start for more seamless conversations. Available in the SDK and Link integrations.
+- title: Webhooks
+  breaking: false
+  highlights: >-
+    Real-time event notifications from Quarterzip. Subscribe to call events and push
+    data into external systems such as CRMs and analytics platforms.
+- title: Mobile Call
+  breaking: false
+  highlights: >-
+    Support for launching guided sessions from mobile devices.

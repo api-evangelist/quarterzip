@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/sdk-api
+note: >-
+  Cross-cutting semantics for the Quarterzip client-side SDK and webhook surface.
+  Quarterzip is not a REST API; idempotency and pagination are not documented and are
+  therefore not asserted here.
+authentication:
+  style: workspace-token + agentId (client-side SDK config)
+  ref: authentication/quarterzip-authentication.yml
+webhooks:
+  spec: standard-webhooks
+  signature_headers:
+  - webhook-id
+  - webhook-timestamp
+  - webhook-signature
+  secret_format: whsec_
+  ref: asyncapi/quarterzip-webhooks.yml
+context_passing:
+  field: context
+  max_chars: 2000
+  description: Additional free-text context passed to the agent at call start.
+lifecycle:
+  spa_bound: >-
+    The SDK maintains a WebRTC connection tied to the page lifecycle; full page
+    reloads disconnect the call and do not auto-reconnect.
+  ref: lifecycle/quarterzip-lifecycle.yml
+client_requirements:
+  screen_share_api: navigator.mediaDevices.getDisplayMedia
+  csp:
+    script-src:
+    - https://*.quarterzip.ai
+    connect-src:
+    - quarterzip.ai
+    - daily.co
+    - firebase
+    - google identity services
+  permissions_policy:
+  - microphone
+  - display-capture
+  - speaker-selection
+idempotency:
+  supported: false
+  note: No idempotency key is documented for the SDK or webhook surface.
+pagination:
+  supported: false
+  note: No paginated collection API is documented.

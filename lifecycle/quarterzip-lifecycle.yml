@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://status.quarterzip.ai/
+status_page: https://status.quarterzip.ai/
+versioning:
+  scheme: rolling
+  docs: https://docs.quarterzip.ai/changelog
+  note: >-
+    Quarterzip publishes a rolling feature changelog rather than a numbered API
+    version scheme. No formal deprecation/sunset policy (RFC 8594) is documented.
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+deprecated_operations: []

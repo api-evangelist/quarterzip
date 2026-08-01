@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+source: https://trust.quarterzip.ai/
+url: https://trust.quarterzip.ai/
+certifications:
+- ISO 27001
+evidence:
+- source: https://trust.quarterzip.ai/
+  keywords:
+  - trust center
+  - compliance
+- source: https://www.quarterzip.ai/legal/security-and-trust-overview
+  keywords:
+  - iso 27001

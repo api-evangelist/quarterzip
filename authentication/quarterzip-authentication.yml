@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/sdk-api
+docs: https://docs.quarterzip.ai/sdk-api
+note: >-
+  Quarterzip exposes a client-side JavaScript SDK and signed webhooks rather than a
+  traditional REST API. Authentication is derived from the published SDK and webhook
+  docs, not an OpenAPI securityScheme.
+summary:
+  types:
+  - workspace-token
+  - hmac-signature
+  api_key_in:
+  - client-config
+schemes:
+- name: workspaceToken
+  type: apiKey
+  in: sdk-config
+  description: >-
+    Workspace token issued by Quarterzip (app Settings), passed to Quarterzip.open()
+    together with an agentId (from the agent URL /w/{WORKSPACE_ID}/a/{AGENT_ID}).
+  source: https://docs.quarterzip.ai/sdk-api
+- name: webhookSignature
+  type: hmac
+  scheme: standard-webhooks
+  secret_format: whsec_
+  description: >-
+    Inbound webhook deliveries are signed with an HMAC (Standard Webhooks) using the
+    workspace signing secret; consumers verify the webhook-signature header.
+  source: https://docs.quarterzip.ai/webhooks
+controls:
+- domain-restriction: >-
+    Origin-header validation ("domain restriction") can be enabled in the Quarterzip
+    app so SDK requests are only accepted from allowlisted origins.

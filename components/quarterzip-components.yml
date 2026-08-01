@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/deploy-quarterzip-sdk
+note: >-
+  Quarterzip's product is delivered as an embeddable client-side UI component (an
+  in-app screenshare/voice agent) rather than a headless API. Two delivery surfaces
+  are documented: a hosted Link URL and the embeddable SDK mini-player.
+families:
+- name: Screenshare Agent
+  loader: async <script> stub (https://*.quarterzip.ai)
+  components:
+  - name: Agent mini-player
+    description: >-
+      Draggable in-app call surface launched from your own UI via
+      window.Quarterzip.open(); the call starts after the user clicks Join.
+    entry: window.Quarterzip.open()
+  - name: Link surface
+    description: >-
+      Hosted URL deployment of the agent for quick validation before SDK
+      integration.
+    url: https://docs.quarterzip.ai/quarterzip-link-solution
+integrations:
+- name: Enablement platforms
+  description: >-
+    Embed agents into digital sales rooms / enablement platforms such as Arrows and
+    Dock.
+  url: https://docs.quarterzip.ai/enhancing-enablement-platforms

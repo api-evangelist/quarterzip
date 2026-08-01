@@ -1,0 +1,16 @@
+# Quarterzip Docs
+
+## Docs
+
+- [Best Practices](https://docs.quarterzip.ai/best-practices.md)
+- [Changelog](https://docs.quarterzip.ai/changelog.md): New features and updates to Quarterzip
+- [SDK](https://docs.quarterzip.ai/deploy-quarterzip-sdk.md)
+- [Enablement Platforms](https://docs.quarterzip.ai/enhancing-enablement-platforms.md): Add Quarterzip agents to digital sales rooms and enablement platforms like Arrows and Dock
+- [Overview](https://docs.quarterzip.ai/getting-started.md)
+- [Link](https://docs.quarterzip.ai/quarterzip-link-solution.md)
+- [API Reference](https://docs.quarterzip.ai/sdk-api.md): SDK API reference and environment requirements
+- [Webhooks](https://docs.quarterzip.ai/webhooks.md): Receive real-time, signed notifications when events occur in your Quarterzip workspace.
+
+## OpenAPI Specs
+
+- [openapi](https://docs.quarterzip.ai/api-reference/openapi.json)

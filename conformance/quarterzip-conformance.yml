@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/webhooks
+standards:
+- id: standard-webhooks
+  conforms: true
+  evidence: >-
+    Webhook deliveries use the Standard Webhooks spec: webhook-id, webhook-timestamp,
+    and webhook-signature (v1,<base64>) headers with an HMAC signed by a whsec_ secret.
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    Quarterzip publishes ISO 27001 certification on its security overview and trust
+    center (trust.quarterzip.ai).
+- id: oauth2
+  conforms: false
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false

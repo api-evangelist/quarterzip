@@ -1,0 +1,52 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.quarterzip.ai/webhooks
+spec_type: Webhooks
+summary: >-
+  Quarterzip delivers signed, real-time webhooks conforming to the Standard Webhooks
+  specification. Endpoints are configured in the Quarterzip dashboard (Settings ->
+  Webhooks); one HTTPS endpoint per workspace (public address, no localhost). Every
+  delivery is signed with an HMAC using the workspace signing secret (format whsec_...).
+delivery:
+  transport: https-post
+  content_type: application/json
+  max_payload_bytes: 1048576
+  truncation_flag: transcript_truncated
+  spec: standard-webhooks
+  endpoint_limit: one per workspace
+  requirements:
+  - HTTPS endpoint with public IP (no localhost or private addresses)
+signature:
+  spec: https://www.standardwebhooks.com/
+  secret_format: whsec_
+  headers:
+  - name: webhook-id
+    description: Unique delivery identifier
+  - name: webhook-timestamp
+    description: Unix timestamp (seconds) of send time
+  - name: webhook-signature
+    description: Space-separated v1,<base64-signature> values
+  verification: >-
+    Always verify the signature before trusting a webhook. Secret rotation is
+    available; the old secret stops verifying immediately upon rotation.
+events:
+- type: call.completed
+  description: >-
+    Sent after a call finishes processing and its transcript and ratings become
+    available.
+  payload:
+    type: call.completed
+    timestamp: ISO 8601
+    data_fields:
+    - call_id
+    - workspace_id
+    - deployment_id
+    - started_at
+    - ended_at
+    - is_test
+    - is_coaching
+    - is_phone
+    - is_sdk
+    - call_quality_rating
+    - product_experience_rating
+    - transcript
