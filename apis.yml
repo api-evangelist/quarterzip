@@ -48,7 +48,7 @@ modified: '2026-07-20'
 tags:
 - Company
 - AI Agents
-- Customer-Support
+- Customer Support
 - Onboarding
 - User Activation
 - Screen Sharing
@@ -67,6 +67,7 @@ tags_raw:
 - Webhooks
 - SDK
 - Developer Tools
+- Customer-Support
 apis: []
 maintainers:
 - FN: Kin Lane
